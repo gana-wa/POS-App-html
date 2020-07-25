@@ -33,22 +33,19 @@
         </nav>
         <nav class="navbar navbar-light bg-white cart-header">
             <h4>Cart</h4>
-            <span class="badge badge-pill badge-info">0</span>
+            <span class="badge badge-pill badge-info m-2">3</span>
         </nav>
     </div>
     <!-- End of Navbar -->
 
     <!-- Main -->
     <div class="main">
-        <!-- left sidebar -->
         <div class="main-menu shadow-lg">
             <img src="assets/fork.png" alt="fork">
             <img src="assets/clipboard.png" alt="clipboard">
             <img src="assets/add.png" alt="add">
         </div>
-        <!-- end of left sidebar -->
 
-        <!-- main content -->
         <div class="main-content">
             <div class="row row-cols-1 row-cols-md-3 justify-content-center px-5 py-3">
                 <div class="col mb-4 col-md-4 item-menu">
@@ -57,7 +54,9 @@
                     <h5 class="font-weight-bold">Rp. 10.000</h5>
                 </div>
                 <div class="col mb-4 col-md-4 item-menu">
-                    <img src="assets/bear.png" class="card-img-top" alt="...">
+                    <div class="item-menu-selected">
+                        <img src="assets/bear.png" class="card-img-top " alt="...">
+                    </div>
                     <h5>Cofee Latte</h5>
                     <h5 class="font-weight-bold">Rp. 15.000</h5>
                 </div>
@@ -98,18 +97,70 @@
                 </div>
             </div>
         </div>
-        <!-- end of main content -->
 
-        <!-- cart -->
-        <div class="cart justify-content-center">
-            <div class="cart-empty">
-                <img src="assets/food.png" alt="food">
-                <h4>Your cart is empty</h4>
-                <p>Please add some items from the menu</p>
+        <div class="cart flex-column">
+            <div class="container">
+                <div class="row pt-4">
+                    <div class="col-md-3 cart-selected">
+                        <img src="assets/bear.png" alt="1">
+                    </div>
+                    <div class="col">
+                        <h5>Coffee Latte</h5>
+                        <button type="button" class="btn btn-outline-success btn-sm">Success</button>
+                    </div>
+                    <div class="col d-flex">
+                        <h5 class="mt-auto ml-auto">Rp. 15.000</h5>
+                    </div>
+                </div>
+                <div class="row pt-4">
+                    <div class="col-md-3 cart-selected">
+                        <img src="assets/blackforest.png" alt="1">
+                    </div>
+                    <div class="col">
+                        <h5>Black Forest</h5>
+                        <button type="button" class="btn btn-outline-success btn-sm">Success</button>
+                    </div>
+                    <div class="col d-flex">
+                        <h5 class="mt-auto ml-auto">Rp. 30.000</h5>
+                    </div>
+                </div>
+                <div class="row pt-4">
+                    <div class="col-md-3 cart-selected">
+                        <img src="assets/salmon.png" alt="1">
+                    </div>
+                    <div class="col">
+                        <h5>Salmon Truffle</h5>
+                        <button type="button" class="btn btn-outline-success btn-sm">Success</button>
+                    </div>
+                    <div class="col d-flex">
+                        <h5 class="mt-auto ml-auto">Rp. 60.000</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-auto mx-2">
+                <div class="col">
+                    <h4 class="font-weight-bold">Total :</h4>
+                </div>
+                <div class="col d-flex">
+                    <h4 class="ml-auto font-weight-bold">Rp. 105.000*</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p>*Belum termasuk ppn</p>
+                </div>
+            </div>
+            <div class="row mx-3 my-2">
+                <div class="col">
+                    <button type="button" class="btn btn-info btn-block btn-lg" style="background-color: #57CAD5; border: 0px; border-radius: 0px;">Checkout</button>
+                </div>
+            </div>
+            <div class="row mx-3 my-2">
+                <div class="col">
+                    <button type="button" class="btn btn-danger btn-block btn-lg" style="background-color: #F24F8A; border: 0px; border-radius: 0px;">Cancel</button>
+                </div>
             </div>
         </div>
-        <!-- end of cart -->
-
     </div>
     <!-- End Main -->
 
