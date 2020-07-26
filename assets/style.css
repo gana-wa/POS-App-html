@@ -1,7 +1,9 @@
 /* fonts */
+
 /* end fonts */
 
 /* head */
+
 .navs {
     display: flex;
 }
@@ -20,6 +22,7 @@
 }
 
 /* body */
+
 .main {
     display: flex;
     width: 100%;
@@ -34,6 +37,18 @@
 }
 
 .main-menu img {
+    margin: 25px auto;
+    width: 30px;
+    height: 30px;
+}
+
+.main-menu-history {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+.main-menu-history img {
     margin: 25px auto;
     width: 30px;
     height: 30px;
@@ -112,3 +127,64 @@
 }
 
 /* DESKTOP */
+
+/* HISTORY PAGE */
+.navs-history {
+    
+}
+
+.card-income {
+    border: none;
+    border-radius: 20px;
+    background: linear-gradient( 285.38deg, #fbb2b4 30.05%, rgba(255, 143, 178, 0) 133.19%);
+    filter: drop-shadow(10px 15px 10px rgba(255, 143, 178, 0.25));
+}
+
+.card-orders {
+    border: none;
+    border-radius: 20px;
+    background: linear-gradient( 285.38deg, #29dfff 30.05%, rgba(41, 223, 255, 0) 133.19%);
+    filter: drop-shadow(10px 15px 10px rgba(41, 223, 255, 0.25));
+}
+
+.card-years-income {
+    border: none;
+    border-radius: 20px;
+    background: linear-gradient( 285.38deg, #ab84c8 30.05%, rgba(241, 201, 236, 0) 133.19%);
+    filter: drop-shadow(10px 15px 10px rgba(241, 201, 236, 0.25));
+}
+
+.title-info {
+    margin: 20px 0px;
+    box-sizing: border-box;
+}
+
+.title-info p {
+    font-size: 12px;
+}
+
+.title-info h3 {
+    margin-top: -10px;
+}
+
+.img-bulat img {
+    width: 80px;
+    /* background-color: black; */
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.bulat1 {
+    margin-top: 25px;
+    margin-right: 65px;
+}
+
+.bulat2 {
+    margin-top: 9px;
+    margin-right: 28px;
+}
+
+.chart {
+    border-radius: 10px;
+}

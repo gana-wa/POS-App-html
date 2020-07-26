@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+   <!-- Required meta tags -->
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+   <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+   <!-- My css -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+   <link rel="stylesheet" href="assets/style.css">
+
+   <title>Week 3</title>
+
+   <!-- gChart -->
+   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+   <script type="text/javascript">
+      google.charts.load('current', { 'packages': ['corechart'] });
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+         var data = google.visualization.arrayToDataTable([
+            ['Year', 'Sales', 'Expenses'],
+            ['2004', 1000, 400],
+            ['2005', 1170, 460],
+            ['2006', 660, 1120],
+            ['2007', 1030, 540]
+         ]);
+
+         var options = {
+            title: 'Company Performance',
+            curveType: 'function',
+            legend: { position: 'bottom' }
+         };
+
+         var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+         chart.draw(data, options);
+      }
+   </script>
+</head>
+
+<body>
+   <div class="container-fluid">
+      <!-- Header -->
+      <div class="row navbar navbar-light bg-white shadow p-3 rounded">
+         <div class="col-1">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+               aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+            </button>
+         </div>
+         <div class="col-11">
+            <h4 style="font-size: 30px;" class="text-center">History</h4>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+               <p>hehehe</p>
+            </div>
+         </div>
+      </div>
+      <!-- end of header -->
+
+      <!-- body -->
+      <div class="row">
+         <!-- left sidebar -->
+         <div class="col-1">
+            <div class="row flex-column shadow h-100">
+               <div class="col main-menu-history">
+                  <a href="home.html" class="mx-auto">
+                     <img src="assets/fork.png" alt="fork">
+                  </a>
+               </div>
+               <div class="col main-menu-history">
+                  <a href="history.html" class="mx-auto">
+                     <img src="assets/clipboard.png" alt="clipboard">
+                  </a>
+               </div>
+               <div class="col main-menu-history">
+                  <a href="" data-toggle="modal" data-target="#modalAdd" class="mx-auto">
+                     <img src="assets/add.png" alt="add">
+                  </a>
+               </div>
+            </div>
+         </div>
+         <!-- end of left sidebar -->
+         <!-- main  -->
+         <div class="col-11">
+            <div class="row">
+               <div class="col mt-3">
+                  <div class="card card-income">
+                     <div class="card-body">
+                        <div class="title-info font-weight-bold">
+                           <p>Today's Income</p>
+                           <h3>Rp. 1.000.000</h3>
+                           <p>+2% Yesterday</p>
+                        </div>
+                     </div>
+                     <div class="img-bulat">
+                        <img src="assets/Ellipse 2.png" alt="" class="bulat1">
+                        <img src="assets/Ellipse 2.png" alt="" class="bulat2">
+                        <img src="assets/Ellipse 2.png" alt="" class="bulat3">
+                     </div>
+                  </div>
+               </div>
+               <div class="col mt-3">
+                  <div class="card card-orders">
+                     <div class="card-body">
+                        <div class="title-info font-weight-bold">
+                           <p>Orders</p>
+                           <h3>3.270</h3>
+                           <p>+5% Last Week</p>
+                        </div>
+                        <div class="img-bulat">
+                           <img src="assets/Ellipse 2.png" alt="" class="bulat1">
+                           <img src="assets/Ellipse 2.png" alt="" class="bulat2">
+                           <img src="assets/Ellipse 2.png" alt="" class="bulat3">
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col mt-3">
+                  <div class="card card-years-income">
+                     <div class="card-body">
+                        <div class="title-info font-weight-bold">
+                           <p>This Year's Income</p>
+                           <h3>Rp. 1.000.000.000.000</h3>
+                           <p>+10% Last Yesterday</p>
+                        </div>
+                        <div class="img-bulat">
+                           <img src="assets/Ellipse 2.png" alt="" class="bulat1">
+                           <img src="assets/Ellipse 2.png" alt="" class="bulat2">
+                           <img src="assets/Ellipse 2.png" alt="" class="bulat3">
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <!-- chart -->
+            <div class="chart border-primary shadow mx-auto mt-5">
+               <div id="curve_chart" style="width: 900px; height: 500px"></div>
+            </div>
+            <!-- end of chart -->
+            <div class="chart mt-5 mb-4 bg-white border shadow">
+               <div class="row mt-4 px-2 py-3">
+                  <div class="col">
+                     <h5>Recent Order</h5>
+                  </div>
+                  <div class="col-2">
+                     <select id="inputState" class="form-control btn-sm btn-secondary">
+                        <option selected>Category</option>
+                        <option>...</option>
+                     </select>
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="container">
+                     <table class="table">
+                        <thead>
+                           <tr>
+                              <th scope="col">INVOICES</th>
+                              <th scope="col">CASHIER</th>
+                              <th scope="col">DATE</th>
+                              <th scope="col">ORDERS</th>
+                              <th scope="col">AMOUNT</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <th scope="row">#10928</th>
+                              <td>Cashier 1</td>
+                              <td>27 July 2020</td>
+                              <td>Cofee Latte </td>
+                              <td>Rp. 15.000</td>
+                           </tr>
+                           <tr>
+                              <th scope="row">#10927</th>
+                              <td>Cashier 1</td>
+                              <td>27 July 2020</td>
+                              <td>Choco Rhum, Cappucino </td>
+                              <td>Rp. 33.000</td>
+                           </tr>
+                           <tr>
+                              <th scope="row">#10926</th>
+                              <td>Cashier </td>
+                              <td>27 July 2020</td>
+                              <td>Chiken Katsu Dabu-dabu </td>
+                              <td>Rp. 60.000</td>
+                           </tr>
+                           <tr>
+                              <th scope="row">#10925</th>
+                              <td>Cashier 2</td>
+                              <td>27 July 2020</td>
+                              <td>Espresso </td>
+                              <td>Rp. 10.000</td>
+                           </tr>
+                           <tr>
+                              <th scope="row">#10924</th>
+                              <td>Cashier 1</td>
+                              <td>27 July 2020</td>
+                              <td>Red Velvet Latte </td>
+                              <td>Rp. 33.000</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- end of main -->
+      </div>
+      <!-- end of body -->
+   </div>
+
+
+   <!-- Optional JavaScript -->
+   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"></script>
+</body>
+
+</html>
