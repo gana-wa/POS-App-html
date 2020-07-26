@@ -40,15 +40,21 @@
 
     <!-- Main -->
     <div class="main">
+        <!-- left sidebar -->
         <div class="main-menu shadow-lg">
-            <img src="assets/fork.png" alt="fork">
-            <img src="assets/clipboard.png" alt="clipboard">
+            <a href="home.html" class="mx-auto">
+                <img src="assets/fork.png" alt="fork">
+            </a>
+            <a href="history.html" class="mx-auto">
+                <img src="assets/clipboard.png" alt="clipboard">
+            </a>
             <a href="" data-toggle="modal" data-target="#modalAdd" class="mx-auto">
                 <img src="assets/add.png" alt="add">
             </a>
-
         </div>
+        <!-- end of left sidebar -->
 
+        <!-- main content -->
         <div class="main-content">
             <div class="row row-cols-1 row-cols-md-3 justify-content-center px-5 py-3">
                 <div class="col mb-4 col-md-4 item-menu">
@@ -79,7 +85,9 @@
                     <h5 class="font-weight-bold">Rp. 28.000</h5>
                 </div>
                 <div class="col mb-4 col-md-4 item-menu">
-                    <img src="assets/blackforest.png" class="card-img-top" alt="...">
+                    <div class="item-menu-selected">
+                        <img src="assets/blackforest.png" class="card-img-top" alt="...">
+                    </div>
                     <h5>Black Forest</h5>
                     <h5 class="font-weight-bold">Rp. 30.000</h5>
                 </div>
@@ -89,7 +97,9 @@
                     <h5 class="font-weight-bold">Rp. 60.000</h5>
                 </div>
                 <div class="col mb-4 col-md-4 item-menu">
-                    <img src="assets/salmon.png" class="card-img-top" alt="...">
+                    <div class="item-menu-selected">
+                        <img src="assets/salmon.png" class="card-img-top" alt="...">
+                    </div>
                     <h5>Salmon Truffle Teriyaki</h5>
                     <h5 class="font-weight-bold">Rp. 60.000</h5>
                 </div>
@@ -100,7 +110,9 @@
                 </div>
             </div>
         </div>
+        <!-- end of main content -->
 
+        <!-- chart -->
         <div class="cart flex-column">
             <div class="container">
                 <div class="row pt-4">
@@ -179,6 +191,7 @@
                 </div>
             </div>
         </div>
+        <!-- end of cart -->
     </div>
     <!-- End Main -->
 
