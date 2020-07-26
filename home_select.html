@@ -43,7 +43,10 @@
         <div class="main-menu shadow-lg">
             <img src="assets/fork.png" alt="fork">
             <img src="assets/clipboard.png" alt="clipboard">
-            <img src="assets/add.png" alt="add">
+            <a href="" data-toggle="modal" data-target="#modalAdd" class="mx-auto">
+                <img src="assets/add.png" alt="add">
+            </a>
+
         </div>
 
         <div class="main-content">
@@ -55,7 +58,7 @@
                 </div>
                 <div class="col mb-4 col-md-4 item-menu">
                     <div class="item-menu-selected">
-                        <img src="assets/bear.png" class="card-img-top " alt="...">
+                        <img src="assets/bear.png" class="card-img-top" alt="...">
                     </div>
                     <h5>Cofee Latte</h5>
                     <h5 class="font-weight-bold">Rp. 15.000</h5>
@@ -104,9 +107,13 @@
                     <div class="col-md-3 cart-selected">
                         <img src="assets/bear.png" alt="1">
                     </div>
-                    <div class="col">
+                    <div class="col d-flex flex-column">
                         <h5>Coffee Latte</h5>
-                        <button type="button" class="btn btn-outline-success btn-sm">Success</button>
+                        <div class="btn-group mt-auto" role="group" aria-label="Basic example">
+                            <button type="button" class="btn btn-success number-add">-</button>
+                            <button type="button" class="btn btn btn-outline-success number-add-num">1</button>
+                            <button type="button" class="btn btn-success number-add">+</button>
+                        </div>
                     </div>
                     <div class="col d-flex">
                         <h5 class="mt-auto ml-auto">Rp. 15.000</h5>
@@ -116,9 +123,13 @@
                     <div class="col-md-3 cart-selected">
                         <img src="assets/blackforest.png" alt="1">
                     </div>
-                    <div class="col">
+                    <div class="col d-flex flex-column">
                         <h5>Black Forest</h5>
-                        <button type="button" class="btn btn-outline-success btn-sm">Success</button>
+                        <div class="btn-group mt-auto" role="group" aria-label="Basic example">
+                            <button type="button" class="btn btn-success number-add">-</button>
+                            <button type="button" class="btn btn btn-outline-success number-add-num">1</button>
+                            <button type="button" class="btn btn-success number-add">+</button>
+                        </div>
                     </div>
                     <div class="col d-flex">
                         <h5 class="mt-auto ml-auto">Rp. 30.000</h5>
@@ -128,9 +139,13 @@
                     <div class="col-md-3 cart-selected">
                         <img src="assets/salmon.png" alt="1">
                     </div>
-                    <div class="col">
+                    <div class="col d-flex flex-column">
                         <h5>Salmon Truffle</h5>
-                        <button type="button" class="btn btn-outline-success btn-sm">Success</button>
+                        <div class="btn-group mt-auto" role="group" aria-label="Basic example">
+                            <button type="button" class="btn btn-success number-add">-</button>
+                            <button type="button" class="btn btn btn-outline-success number-add-num">1</button>
+                            <button type="button" class="btn btn-success number-add">+</button>
+                        </div>
                     </div>
                     <div class="col d-flex">
                         <h5 class="mt-auto ml-auto">Rp. 60.000</h5>
@@ -145,25 +160,164 @@
                     <h4 class="ml-auto font-weight-bold">Rp. 105.000*</h4>
                 </div>
             </div>
-            <div class="row">
+            <div class="row mx-2">
                 <div class="col">
                     <p>*Belum termasuk ppn</p>
                 </div>
             </div>
             <div class="row mx-3 my-2">
                 <div class="col">
-                    <button type="button" class="btn btn-info btn-block btn-lg" style="background-color: #57CAD5; border: 0px; border-radius: 0px;">Checkout</button>
+                    <button type="button" class="btn btn-info btn-block btn-lg"
+                        style="background-color: #57CAD5; border: 0px; border-radius: 0px;" data-toggle="modal"
+                        data-target="#modalCart">Checkout</button>
                 </div>
             </div>
             <div class="row mx-3 my-2">
                 <div class="col">
-                    <button type="button" class="btn btn-danger btn-block btn-lg" style="background-color: #F24F8A; border: 0px; border-radius: 0px;">Cancel</button>
+                    <button type="button" class="btn btn-danger btn-block btn-lg"
+                        style="background-color: #F24F8A; border: 0px; border-radius: 0px;">Cancel</button>
                 </div>
             </div>
         </div>
     </div>
     <!-- End Main -->
 
+    <!-- Modal -->
+    <div class="modal fade" id="modalCart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <!-- <div class="modal-header d-flex flex-column justify-content-between" style="border: 0px;">
+                </div> -->
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col">
+                            <h5 style="font-size: 30px;">Checkout</h5>
+                        </div>
+                        <div class="col ml-auto">
+                            <h5 class="mt-2">Receipt no: #010410919</h5>
+                        </div>
+                    </div>
+                    <div class="row mb-5">
+                        <div class="col">
+                            <h5 style="font-size: 15px;">Cashier : Pevita Pearce</h5>
+                        </div>
+                    </div>
+                    <div class="row py-1">
+                        <div class="col">
+                            <h5>Coffee Latte 1x</h5>
+                        </div>
+                        <div class="col d-flex">
+                            <h5 class="ml-auto">Rp. 15.000</h5>
+                        </div>
+                    </div>
+                    <div class="row py-1">
+                        <div class="col">
+                            <h5>Black Forest 1x</h5>
+                        </div>
+                        <div class="col d-flex">
+                            <h5 class="ml-auto">Rp. 30.000</h5>
+                        </div>
+                    </div>
+                    <div class="row py-1">
+                        <div class="col">
+                            <h5>Salmon Truffle Teriyaki 1x</h5>
+                        </div>
+                        <div class="col d-flex">
+                            <h5 class="ml-auto">Rp. 60.000</h5>
+                        </div>
+                    </div>
+                    <div class="row py-1">
+                        <div class="col">
+                            <h5>Ppn 10%</h5>
+                        </div>
+                        <div class="col d-flex">
+                            <h5 class="ml-auto">Rp. 10.500</h5>
+                        </div>
+                    </div>
+                    <div class="row py-1">
+                        <div class="col d-flex">
+                            <h5 class="ml-auto">Total : Rp. 10.500</h5>
+                        </div>
+                    </div>
+                    <div class="row py-1">
+                        <div class="col">
+                            <h5 class="ml-auto">Payment: Cash</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer" style="border: 0px;">
+                    <button type="button" class="btn btn-danger btn-block btn-lg"
+                        style="background-color: #F24F8A; border: 0px;" data-dismiss="modal">Print</button>
+                    <h5 class="mx-auto">Or</h5>
+                    <button type="button" class="btn btn-info btn-block btn-lg"
+                        style="background-color: #57CAD5; border: 0px;">Send Email</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal 2 -->
+    <div class="modal fade" id="modalAdd" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col">
+                            <h4>Add Item</h4>
+                        </div>
+                    </div>
+                    <form>
+                        <div class="form-group">
+                            <div class="row my-3">
+                                <div class="col">
+                                    <h5>Name</h5>
+                                </div>
+                                <div class="col-md-9 ml-auto">
+                                    <input type="text" class="form-control shadow-sm" id="recipient-name">
+                                </div>
+                            </div>
+                            <div class="row my-3">
+                                <div class="col">
+                                    <h5>Image</h5>
+                                </div>
+                                <div class="col-md-9 ml-auto">
+                                    <input type="text" class="form-control shadow-sm" id="recipient-name">
+                                </div>
+                            </div>
+                            <div class="row my-3">
+                                <div class="col">
+                                    <h5>Price</h5>
+                                </div>
+                                <div class="col-md-7">
+                                    <input type="text" class="form-control shadow-sm" id="recipient-name">
+                                </div>
+                            </div>
+                            <div class="row my-3">
+                                <div class="col">
+                                    <h5>Category</h5>
+                                </div>
+                                <div class="col-md-5">
+                                    <select id="inputState" class="form-control shadow-sm">
+                                        <option selected>Category</option>
+                                        <option>...</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer" style="border: 0px;">
+                    <button type="button" class="btn btn-danger col-md-3"
+                        style="background-color: #F24F8A; border: 0px;" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-info col-md-3"
+                        style="background-color: #57CAD5; border: 0px;">Add</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end of Modal -->
 
 
     <!-- Optional JavaScript -->
